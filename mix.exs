@@ -29,13 +29,13 @@ defmodule OAuth2Ex.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:httpoison, "~> 0.6"},
+      {:httpoison, "~> 0.7"},
       {:exjsx, "~> 3.1"},
       {:cowboy, "~> 1.0"},
-      {:plug, "~> 0.11"},
+      {:plug, "~> 0.14"},
       {:timex, "~> 0.13"},
-      {:excoveralls, "~> 0.3", only: [:dev, :test]},
-      {:exvcr, "~> 0.3", only: [:dev, :test]}
+      #{:excoveralls, "~> 0.3", only: [:dev, :test]},
+      {:exvcr, "~> 0.5", only: [:dev, :test]}
     ]
   end
 
@@ -46,7 +46,7 @@ defmodule OAuth2Ex.Mixfile do
   end
 
   defp package do
-    [ contributors: ["parroty"],
+    [ contributors: ["parroty","jschoch"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/parroty/oauth2ex"} ]
   end
